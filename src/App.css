@@ -1,0 +1,257 @@
+/* GENERAL ------------------------------------ */
+html{
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/e/e4/StarfieldSimulation.gif");
+  background-position: center;
+  background-size: fill;
+  /* background-repeat: no-repeat; */
+  /* background-size: 250%; */
+}
+#root{
+  /* background-color:#f0f2f5 !important; */
+  /* background-image: url("https://upload.wikimedia.org/wikipedia/commons/e/e4/StarfieldSimulation.gif"); */
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.main{
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.mainLink{
+  color: purple;
+  text-decoration: none;
+  font-size: 80px;
+  font-weight: bold;
+  /* margin: auto; */
+  font-family: 'fantasy';
+}
+
+/* to undo default Link style */
+a{
+  text-decoration: none;
+  color: black;
+}
+
+.textArea, .comment .text{
+  /* font-family: 'wingdings'; */
+}
+
+/* header stays when scrolling */
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10; 
+  /* to counteract contacts zindex */
+}
+
+.header p{
+  font-size: 1.5em;
+}
+
+.hide {
+  display: none;
+}
+
+/* for stories component */
+.underline {
+  border-bottom: 3px solid #1876f2;
+  /* border-radius: 0 !important; */
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+button:hover{
+  cursor: pointer;
+}
+
+/* screen sizes */
+.mobile{
+  /* max-height: 844px; */
+  max-width: 700px;
+}
+
+.tablet{
+  max-width: 1200px;
+}
+
+.desktop{
+  min-width: 1200px;
+}
+
+/* END GENERAL ---------------------------------------------- */
+
+/* ROOT PAGE STYLE */
+body{
+  overflow: hidden;
+  position: relative;
+}
+.innerBox{
+  height: 100vh;
+  width: 100vw;
+}
+.triangle-top{
+  border-top: 50vh solid silver;
+  border-left: 50vw solid transparent;
+  border-right: 50vw solid transparent;
+  position: absolute;
+}
+.triangle-bottom{
+  top: 50vh;
+  border-bottom: 50vh solid silver;
+  border-left: 50vw solid transparent;
+  border-right: 50vw solid transparent;
+  position: absolute;
+}
+.triangle-left{
+  border-left: 50vw solid grey;
+  border-bottom: 50vh solid transparent;
+  border-top: 50vh solid transparent;
+  position: absolute;
+}
+.triangle-right{
+  left: 50vw;
+  border-right: 50vw solid grey;
+  border-bottom: 50vh solid transparent;
+  border-top: 50vh solid transparent;
+  position: absolute;
+}
+.infoBox{
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/e/e4/StarfieldSimulation.gif");
+  background-size: cover;
+  color: white;
+  font-size: 80px;
+  top: 15vh;
+  left: 15vw;
+  height: 70vh;
+  width: 70vw;
+  text-align: center;
+  position: absolute;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.spaceBook{
+  padding-top: 20vh;
+  width: 68vw;
+  height:100px;
+  border-top-width:4px;
+  border-bottom-width:1px;
+  -webkit-transform: perspective(200px) rotateX(40deg);
+  margin:0px;
+}
+.acomment{
+  padding-top: 5vh;
+  width: 60vw;
+  height:100px;
+  border-top-width:4px;
+  border-bottom-width:1px;
+  transform: perspective(100px) rotateX(-20deg);
+  margin:1px;
+  position: absolute;
+  z-index: 2;
+  font-size: 25px;
+  left: 28vw;
+  color: black;
+}
+
+.marq, .bcBox {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+}
+
+/* ------------- END ROOT */
+
+
+.storiesContainer{
+  /* background-color: red !important; */
+  /* margin-top: 85px !important; */
+  border: none !important;
+  height: 270px !important;
+  width: 650px !important;
+}
+
+.storiesContainer * *:hover{
+  cursor: pointer;
+  background-color: rgba(128, 128, 128, 0.363);
+}
+.storiesContainer .options *:hover{
+  cursor: pointer;
+  border-radius: 10px !important;
+  background-color: rgba(128, 128, 128, 0.363);
+  border-radius: 10px !important;
+  border-bottom-left-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
+.storiesContainer{
+  border: 2px solid grey;
+  border-radius: 10px;
+  width: 550px;
+  /* margin: 20px auto; */
+  /* padding: 10px; */
+  background-color: white;
+  height: 260px;
+}
+
+.storiesContainer .options{
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.5em;
+  text-align: center;
+  padding: 10px 10px;
+  
+}
+
+.storiesContainer .options *{
+  width: 50%;
+  padding-bottom: 5px;
+  margin-bottom: -10px;
+}
+.stories{
+  height: 250px;
+  display: flex;
+  /* justify-content: space-evenly; */
+  flex-wrap: nowrap;
+  overflow: scroll;
+}
+
+.story{
+  /* border: 1px solid lime; */
+  border-radius: 10px;
+  background-color: #006eff48;
+  flex-shrink: 0;
+  height: 190px;
+  width: 120px;
+  margin: 10px 7px;
+}
+
+.story .name {
+  /* border: 1px solid purple; */
+  width: 110px;
+  height: 25px;
+  color: white;
+  font-weight: 500;
+  font-size: .9em;
+  text-align: left;
+  margin-top: 110px;
+  margin-left: 10px;
+  overflow: hidden;
+}
+
+.story .name:hover{
+  background-color: transparent;
+}
+
+.tablet .story .avatar {
+  height: 30px;
+  border-radius: 50%;
+  border: 4px solid #1876f2;
+  margin-left: 10px;
+  margin-top: 10px;
+}
