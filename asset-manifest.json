@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Space_Book_React_FinalGpwk/static/css/main.7f0a2342.css",
+    "main.js": "/Space_Book_React_FinalGpwk/static/js/main.63d11fbf.js",
+    "index.html": "/Space_Book_React_FinalGpwk/index.html",
+    "main.7f0a2342.css.map": "/Space_Book_React_FinalGpwk/static/css/main.7f0a2342.css.map",
+    "main.63d11fbf.js.map": "/Space_Book_React_FinalGpwk/static/js/main.63d11fbf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7f0a2342.css",
+    "static/js/main.63d11fbf.js"
+  ]
+}
